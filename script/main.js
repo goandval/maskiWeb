@@ -2,7 +2,7 @@ let goods = document.querySelectorAll(".product");
 
 let IDs = {}
 // localStorage.setItem('IDs', '');
-if (localStorage.getItem('IDs') !== undefined) {
+if (localStorage.getItem('IDs')) {
 
     let idsInfo = localStorage.getItem('IDs');
 
