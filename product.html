@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПР 2</title>
+    <link rel="icon" href="img/icon1.png" type="image.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./script/basket.js" defer></script>
+    <script src="./script/main.js" defer></script>
+  </head>
+
+<body>
+    <div class="body_background">
+        <div></div><div></div><div></div><div></div><div></div>
+    </div>
+
+    <a href="./index.html"><header>
+        <div class="header_title">
+            <p>Уникальные защитные маски,</p>
+            <p>сшитые в России</p>
+        </div>
+    </header></a>
+    <nav class="menu">
+        <input type="checkbox" name="" id="menu_chk">
+        <label for="menu_chk" class="menu_bars"><i class="fa fa-bars"></i></label>
+        <ul>
+            <li><a href="./catalog.html">Каталог</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
+            <li><a href="./info.html">О нас</a></li>
+            <li><a href="" class="basket_button"><i class="fa fa-basket-shopping"></i></a></li>
+            <li class="socials">
+                <a href="#" class="fab fa-telegram"></a>
+                <a href="#" class="fab fa-viber"></a>
+                <a href="#" class="fab fa-vk"></a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="basket" class="basket__container">
+            <h2 class="basket__title">Корзина</h2>
+            <div class="items"><div></div></div>
+            <span class="close"><a href=""><i class="fa fa-close"></i></a></span>
+            <span class="basket__total"></span>
+            <div class="basket__sort">
+                <button class="basket__sort-asc">
+                    <i class="fa-solid fa-sort-up icons"></i>
+                    <span>Сортировать по возрастанию</span>
+                </button>
+                <button class="basket__sort-desc">
+                    <i class="fa-solid fa-sort-down icons"></i>
+                    <span>Сортировать по убыванию</span>
+                </button>
+            </div>
+            <span class="purchase">Оплатить</span>
+        </div>
+        
+        <section id="catalog"></section>
+
+        <div id="product-info">
+            <div class="content">
+                <img src="./img/2.png" alt="Маска классическая" id="product_img">
+                <div class="info">
+                    <h1 class="title">Классическая</h3>
+                    <h3>Идеальный вариант!</h3>
+                    <p>Маска выполнена из ситца - приятного дышащего материала, который легко отстирывается и не раздражает кожу.</p>
+                    <h3 class="price">100 руб.</h3>
+                    <a href="#" class="buy_button">Купить</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Quick links</h3>
+            <ul>
+                <li><a href="./catalog.html">Catalog</a></li>
+                <li><a href="./info.html">About</a></li>
+                <li><a href="./contacts.html">Contacts</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact us</h3>
+            <ul>
+                <li><i class="fa fa-address-card"></i>г. Москва, ул. Малая Бронная, 36</li>
+                <li><i class="fa fa-phone"></i>+7(495)000-00-00</li>
+                <li><a href=""><i class="fa fa-envelope"></i>mail@mail.ru</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa fa-copyright"></i> All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

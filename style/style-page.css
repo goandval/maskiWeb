@@ -1,0 +1,446 @@
+/* colors: 
+      dark gray - #5f6366
+      dark blue - #4d6d9a
+      light pink - #edb5bf 
+      light blue - #86b3d1
+      coral - #99ced3
+*/
+/* fonts:
+    font-family: 'Josefin Sans', sans-serif; - english
+    font-family: 'Comforter Brush', cursive; - handwriting
+    font-family: 'Comfortaa', cursive; - weighted
+    font-family: 'Poiret One', cursive; - thin
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Comfortaa:wght@300&family=Poiret+One&family=Comforter+Brush&display=swap');
+
+
+
+header {
+    background: url(../img/panoramic-view-moscow-gorod.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.header_title {
+    max-width: 40vw;
+    position: absolute;
+    top: 20vmin;
+    left: 10vmin;
+    color: white;
+    z-index: 2;
+}
+.header_title p:nth-child(1) {
+    padding-bottom: 1.5vh;
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+    font-size: 4vmin;
+    border-bottom: white .4vmin solid;
+}
+.header_title p:nth-child(2) {
+    margin-top: 1vmin;
+    padding-left: 7vmin;
+    font-family: 'Comforter Brush', 'Monotype Corsiva', cursive;
+    font-size: 6vmin;
+    text-wrap: nowrap;
+}
+
+
+
+nav > p {
+    color: white;
+    display: none;
+}
+
+
+
+main {
+    margin-top: 1rem;
+    position: relative;
+}
+
+
+
+#gallery {
+    margin: 5vh auto;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100vh;
+}
+#gallery img {
+    border:#99ced3 solid 1px;
+    height: 30%;
+    object-fit: cover;
+    flex-grow: 1;
+}
+#gallery img:nth-child(1) {
+    height: 40%;
+    width: 100%;
+}
+#gallery img:nth-child(2) {
+    min-width: 50%;
+    object-position: 0 60%;
+}
+#gallery img:nth-child(4) {
+    flex-grow: 0;
+}
+
+.background {
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    border: #99ced3 solid .3vh;
+    border-left: none; border-right: none;
+    z-index: -1;
+}
+.gallery_background {
+    position: absolute;
+    top: -30vh; left: 0;
+}
+.bottom_background {
+    position: absolute;
+    bottom: 32vh; left: 0; 
+}
+.background div:nth-child(1) {
+    background-color: #4d6d9a;
+    width: 27%;
+}
+.background div:nth-child(2) {
+    background-color: #99ced3;
+    width: 4%;
+}
+.background div:nth-child(3) {
+    background-color: #86b3d1;
+    width: 27%;
+}
+.background div:nth-child(4) {
+    background-color: #edb5bf;
+    width: 2%;
+}
+.background div:nth-child(5) {
+    background-color: #5f6366;
+    width: 40%;
+}
+
+
+
+#grid_form form {
+    --white: rgba(255,255,255,0.3);
+
+    background: #8b8f93;
+    padding: 1em 2em;
+    border-radius: 20px;
+    border-left: 1px solid var(--white);
+    border-top: 1px solid var(--white);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    width: 70%;
+    margin: 2em auto;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(50%, 2);
+    grid-template-rows: repeat(1fr, 5);
+    grid-auto-flow: dense;
+    row-gap: .5rem;
+    column-gap: .3rem;
+    justify-content: space-evenly;
+    justify-items: start;
+}
+#grid_form form p, form legend {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    width: 100%;
+}
+#grid_form form p {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+}
+#grid_form form legend, .submit_button {
+    grid-column: span 2;
+    justify-self: center;
+}
+#grid_form form p:nth-child(2) {
+    grid-column: span 2;
+}
+#grid_form form .checkbox {
+    max-height: 12px;
+    flex-shrink: 100;
+}
+#grid_form form .submit_button > input {
+    color: #fff;
+}
+#grid_form form label {
+    font-size: 70%;
+}
+#grid_form form input {
+    padding: .8em;
+    border: none;
+    border-left: 1px solid var(--white);
+    border-top: 1px solid var(--white);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: white;
+    font-weight: 500;
+    background-color: rgba(255,255,255,0.3);
+    transition: background-color 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Comfortaa', cursive;
+    width: 100%;
+}
+#grid_form form input:focus {
+    background-color: #edb5bf;
+}
+#grid_form form ::placeholder {
+    font-size: 1em;
+    color: white;
+}
+
+
+
+.sizes {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sizes h2 {
+    margin: .3em;
+    width: 100%;
+}
+.sizes img {
+    width: 30%;
+    min-width: 250px;
+    margin: .3em;
+}
+.sizes table {
+    margin: .5em;
+    width: 50%;
+}
+table, td, tr {
+    border: 2px #edb5bf solid;
+    border-collapse: collapse;
+}
+td {
+    padding: .3em;
+}
+
+
+
+#grid_gallery {
+    display: grid;
+    grid-template-rows: repeat(3, 28%);
+    grid-template-columns: repeat(4, auto);
+    grid-auto-flow: dense;
+    gap: 10px;
+    justify-content: center;
+    justify-items: stretch;
+    height: 90vh;
+    color: white;
+}
+#grid_gallery .item {
+    background-color: #86b3d1;
+    text-align: center;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color .2s;
+    font-size: smaller;
+}
+#grid_gallery .item img {
+    margin: -1rem auto;
+}
+#grid_gallery .item:nth-child(1) {
+    grid-column: span 2;
+}
+#grid_gallery .item:nth-child(2) {
+    grid-row: span 2;
+}
+#grid_gallery .item:nth-child(4) {
+    grid-row: span 2;
+}
+#grid_gallery .item:nth-child(7) {
+    grid-column: span 3;
+}
+#grid_gallery .item:hover {
+    background-color: #edb5bf;
+}
+
+
+
+#contacts .content {
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 2em;
+}
+#contacts p {
+    text-align: left;
+    font-size: 1.5em;
+}
+#contacts ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    text-align: left;
+    margin: 1em;
+}
+#contacts ul li {
+    margin: 1em;
+}
+#contacts a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 1vh;
+    font-family: 'Comfortaa', cursive;
+    line-height: 2em;
+}
+#contacts span {
+    margin-left: 1em;
+}
+#contacts a:hover {
+    border-bottom: #99ced3 solid 3px;
+}
+.map {
+    position:relative;
+    overflow:hidden;
+    width: 50%;
+}
+.map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}
+
+
+
+#product-info .content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2em auto;
+    width: 100%;
+}
+#product-info img {
+    width: 40%;
+    border-radius: .7em;
+}
+#product-info .info {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 2em auto;
+    width: 50%;
+    padding: 2em;
+    gap: .8em;
+}
+#product-info .info p {
+    text-wrap: wrap;
+    text-align: justify;
+}
+#product-info .info a {
+    text-decoration: none;
+    padding: 1em;
+    width: 70%  ;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: .3em;
+    box-shadow: 0px 5px 8px rgba(255,255,255,0.1);
+    font-size: 1.5em;
+    transition: all .3s;
+}
+#product-info .info a:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+
+
+@media (max-width: 1200px) {
+    #gallery img:nth-child(2) {
+        width: 60%;
+        object-position: 0 60%;
+    }
+    #gallery img:nth-child(3) {
+        max-width: 40%;
+    }
+    #gallery img:nth-child(4) {
+        width: 30%;
+    }
+    #gallery img:nth-child(5) {
+        width: 30%;
+        object-position: 0;
+    }
+    #gallery img:nth-child(6) {
+        width: 30%;
+        object-position: 57% 0;
+    }
+
+    .bottom_background {
+        bottom: 38vh;
+    }
+
+    #grid_gallery .item {
+        padding: 1em;
+    }
+
+    #product-info img {
+        width: 80%;
+    }
+    #product-info .info {
+        width: 80%;
+        margin: 0 auto;
+        padding: 1em 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #gallery img:nth-child(3) {
+        object-position: 80% 0;
+    }
+
+    nav > p {
+        display: block;
+    }
+
+    .bottom_background {
+        bottom: 26.5vh;
+    }
+
+    #grid_form form {
+        width: 100%;
+        padding: .8em;
+    }
+
+    #grid_gallery .item img {
+        height: 20vmin;
+    }
+    #grid_gallery .item {
+        padding: .5em;
+    }
+    #grid_gallery .item img {
+        transform: translateX(-5px);
+    }
+
+    .sizes table {
+        width: 90%;
+    }
+
+    .map {
+        width: 110%;
+    }
+}
