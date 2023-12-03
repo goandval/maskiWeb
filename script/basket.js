@@ -29,7 +29,7 @@ let buyButtons = document.querySelectorAll(".buy_button");
 
 // localStorage.setItem('items', '');
 let items = [];
-if (localStorage.getItem('items') !== undefined) {
+if (localStorage.getItem('items')) {
 
     let itemsInfo = localStorage.getItem('items');
 
