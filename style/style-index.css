@@ -17,31 +17,7 @@
 
 
 header {
-    background: url(../img/panoramic-view-moscow-gorod.jpg);
-    background-size: cover;
     height: 100vh;
-}
-.header_title {
-    max-width: 40vw;
-    position: absolute;
-    top: 20vmin;
-    left: 10vmin;
-    color: white;
-    z-index: 2;
-}
-.header_title p:nth-child(1) {
-    padding-bottom: 1.5vh;
-    text-transform: uppercase;
-    font-family: 'Comfortaa', cursive;
-    font-size: 4vmin;
-    border-bottom: white .4vmin solid;
-}
-.header_title p:nth-child(2) {
-    margin-top: 1vmin;
-    padding-left: 7vmin;
-    font-family: 'Comforter Brush', 'Monotype Corsiva', cursive;
-    font-size: 6vmin;
-    text-wrap: nowrap;
 }
 
 
