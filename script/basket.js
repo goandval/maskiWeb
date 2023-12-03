@@ -72,10 +72,19 @@ basketButton.addEventListener('click', (event) => {
         basket.style.right = '0';
     }, 10);
 
+    document.addEventListener("click", keepMouse);
     updateTotal();
 });
 
-closeButton.addEventListener('click', (event) => {
+function keepMouse(event) {
+    if (event.pageX < window.innerWidth - basket.offsetWidth) {
+        if (basket.offsetWidth != 0) {
+            closeBasket(event);
+        }
+    };
+}
+
+function closeBasket(event) {
     event.preventDefault();
     setTimeout(() => {
         basket.style.right = '-100%';
@@ -83,7 +92,13 @@ closeButton.addEventListener('click', (event) => {
     setTimeout(() => {
         basket.style.display = 'block';
     }, 200);
-});
+    setTimeout(() => {
+        document.removeEventListener("click", keepMouse);
+    }, 400);
+    
+}
+
+closeButton.addEventListener('click', closeBasket);
 
 for (let button of buyButtons) {
     button.addEventListener('click', function(event) {

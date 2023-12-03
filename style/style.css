@@ -104,9 +104,9 @@ nav .socials a {
 }
 nav .menu_bars {
     position: fixed;
-    top: .7em;
+    top: .5em;
     right: .7em;
-    font-size: 5vmin;
+    font-size: 7vmin;
     visibility: hidden;
 }
 nav .basket_button {
