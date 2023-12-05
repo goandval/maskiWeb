@@ -477,7 +477,11 @@ footer .copyright {
     justify-self: center;
     border-top: #edb5bf 1px solid;
     width: 100%;
-    padding-top: .3rem;
+    padding-top: .5rem;
+}
+footer .copyright p {
+    font-family: 'Comfortaa', cursive;
+    text-wrap: wrap;
 }
 footer .fa {
     margin-right: 7px;
